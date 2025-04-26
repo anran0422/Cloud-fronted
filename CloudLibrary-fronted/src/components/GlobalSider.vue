@@ -83,7 +83,8 @@ const fetchTeamSpaceList = async () => {
   if (res.data.code === 0 && res.data.data) {
     teamSpaceList.value = res.data.data
   } else {
-    message.error('加载我的团队空间失败，' + res.data.message)
+    //todo 没有空间是否就不需要报错，有就赋值即可
+    // message.error('加载我的团队空间失败，' + res.data.message)
   }
 }
 
