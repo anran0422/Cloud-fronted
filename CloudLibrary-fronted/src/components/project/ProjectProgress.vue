@@ -67,7 +67,9 @@ const milestones = ref<Milestone[]>([
     status: '规划中',
     features: [
       '更改整套前端 UI 界面',
-      '引入 Elastic 技术栈实现倒排索引'
+      '引入 Elastic 技术栈实现倒排索引',
+      '瀑布流展示',
+      '建议反馈渠道'
     ],
   },
 ])
