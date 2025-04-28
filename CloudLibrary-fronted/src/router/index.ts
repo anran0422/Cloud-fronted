@@ -14,6 +14,7 @@ import SpaceDetailPage from '@/pages/space/SpaceDetailPage.vue'
 import SearchPicturePage from '@/pages/picture/SearchPicturePage.vue'
 import SpaceAnalyzePage from '@/pages/space/SpaceAnalyzePage.vue'
 import SpaceUserManagePage from '@/pages/spacesuer/SpaceUserManagePage.vue'
+import ProjectProgress from "@/components/project/ProjectProgress.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -47,6 +48,11 @@ const router = createRouter({
       path: '/add_picture',
       name: '创建图片',
       component: AddPicturePage,
+    },
+    {
+      path: '/progress',
+      name: '项目进度',
+      component: ProjectProgress,
     },
     {
       path: '/add_picture/batch',
@@ -97,6 +103,12 @@ const router = createRouter({
       component: SpaceUserManagePage,
       props: true,
     },
+    // {
+    //   path: '/feedback',
+    //   name: '建议反馈',
+    //   component: FeedBack,
+    //   props: true,
+    // },
   ]
 })
 

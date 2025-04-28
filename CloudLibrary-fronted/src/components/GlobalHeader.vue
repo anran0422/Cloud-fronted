@@ -43,7 +43,7 @@
 
 <script lang="ts" setup>
 import { computed, h, ref } from 'vue'
-import { LogoutOutlined, HomeOutlined} from '@ant-design/icons-vue'
+import { LogoutOutlined, HomeTwoTone, HeartTwoTone, SmileTwoTone, MailTwoTone, BulbTwoTone} from '@ant-design/icons-vue'
 import { MenuProps, message } from 'ant-design-vue'
 import { useRouter } from 'vue-router'
 import { useLoginUserStore } from '../stores/user'
@@ -55,14 +55,15 @@ const loginUserStore = useLoginUserStore()
 const originItems = [
   {
     key: '/',
-    icon: () => h(HomeOutlined),
+    icon: () => h(HomeTwoTone, {twoToneColor: '#1DA1F2'}),
     label: '主页',
     title: '主页',
   },
   {
     key: '/add_picture',
-    label: '创建图片',
-    title: '创建图片',
+    icon: () => h(SmileTwoTone, {twoToneColor: '#eb2f96'}),
+    label: '图片上传',
+    title: '图片上传',
   },
   {
     key: '/admin/userManage',
@@ -81,9 +82,22 @@ const originItems = [
     title: '空间管理',
   },
   {
+    key: '/progress',
+    icon: () => h(HeartTwoTone, {twoToneColor: '#52c41a'}),
+    label: '项目进程',
+    title: '项目进程',
+  },
+  // {
+  //   key: '/feedback',
+  //   icon: () => h(BulbTwoTone, {twoToneColor: '#52c41a'}),
+  //   label: '建议反馈',
+  //   title: '建议反馈',
+  // },
+  {
     key: 'others',
-    label: h('a', { href: 'https://github.com/anran0422', target: '_blank' }, '关于我'),
-    title: '关于我',
+    icon: () => h(MailTwoTone, {twoToneColor: '#7c3aed'}),
+    label: h('a', { href: 'https://github.com/anran0422', target: '_blank' }, '联系我'),
+    title: '联系我',
   },
 ]
 
